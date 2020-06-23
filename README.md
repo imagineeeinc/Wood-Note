@@ -1,4 +1,4 @@
 # DEV-NOTE
 A little test html note pad taking app
 
-[Live demo](google.com)
+[Live demo](https://imagineeeinc.github.io/DEV-NOTE/src/index.html#)
