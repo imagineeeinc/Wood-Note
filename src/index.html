@@ -7,6 +7,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="stylesheet" type="text/css" href="style.css" >
+        <link rel="manifest" href="manifest.json">
         <script src="functionality.js"></script>
         <script src="FileSaver.js"></script>
 
@@ -23,7 +24,8 @@
                         <div id="menubutton"><a href="javascript:menuopen()" id="menulink">MENU&#9776;</a></div>
                         <div id="menu" class="hiddenmenu">
                             <a href="javascript:save();" id="button">Save</a>
-                            <a href="javascript:saveas()" id="saveas" id="button" download="dev_note_TxT.txt" onclick="functionreset()">save as</a>
+                            <a href="javascript:saveas()" id="saveas" id="button">save as</a>
+                            <!--<a href="javascript:loadf()" id="load" id="button"><input type="file" name="inputfile" id="inputfile" oninput="loadf()">load</a>-->
                             <a href="javascript:clear();" id="button">Clear</a>
                             <a href="javascript:home()" id="home" id="button">Home</a>
                             <a href="javascript:about()" id="about" id="button">About us</a>

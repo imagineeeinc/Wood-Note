@@ -1,3 +1,9 @@
+	if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js')
+    .then(reg => console.log('service worker registered'))
+    .catch(err => console.log('service worker not registered', err));
+}
+
 window.onload = function() {
     var home = document.getElementById('container').innerHTML;
     var controls = document.getElementById('controls').innerHTML;
@@ -119,3 +125,25 @@ function saveas(textarea) {
 	var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
 	saveAs(blob, "dev_note_page.txt");
 }
+/*function lodf() {
+	document.getElementById('area').value = "";
+	document.getElementById('inputfile') 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){
+            	document.getElementById('area') 
+                        .textContent=fr.result;
+            } 
+              
+        fr.readAsText(this.files[0]);
+}
+
+function loadf() {
+	var fileToLoad = inputfile;
+	var fileReader = new FileReader();
+	fileReader.onload = function(fileToLoad) {
+		content = e.target.result;
+		console.log("File loaded properly!");;
+};
+document.getElementById('area').value = fileReader
+}*/
