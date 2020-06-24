@@ -117,5 +117,5 @@ function saveasother() {
 function saveas(textarea) {
 	var data = document.getElementsByName('textarea')[0].value;
 	var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
-	saveAs(blob, "hello world.txt");
+	saveAs(blob, "dev_note_page.txt");
 }
