@@ -3,32 +3,41 @@
     <head>
         <title>Dev note</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="stylesheet" type="text/css" href="style.css" >
         <script src="functionality.js"></script>
+        <script src="FileSaver.js"></script>
 
     </head>
     <body>
         <div id="header">
             <p>
                 <div id="controls">
+                    <div id="top">
+                                <h4>DEV Note</h4>
+                        </div>
                     <p>
-                        <div id="menubutton" id="button"><a id="menulink" href="#">MENU&#9776</a></div>
+                        <img src="favicon.ico" style="width: 15px;">
+                        <div id="menubutton"><a href="javascript:menuopen()" id="menulink">MENU&#9776;</a></div>
                         <div id="menu" class="hiddenmenu">
                             <a href="javascript:save();" id="button">Save</a>
+                            <a href="javascript:saveas()" id="saveas" id="button" download="dev_note_TxT.txt" onclick="functionreset()">save as</a>
                             <a href="javascript:clear();" id="button">Clear</a>
-                            <a href="#" id="home" id="button">Home</a>
-                            <a href="#" id="about" id="button">About us</a>
+                            <a href="javascript:home()" id="home" id="button">Home</a>
+                            <a href="javascript:about()" id="about" id="button">About us</a>
                         </div>
                     </p>
                 </div>
-                <div id="top"><h4>DEV Note</h4></div>
             </p>
             <div class="clear"></div>
         </div>
         <div id="container">
-            <textarea id="area" rows="33" cols="100">Hello World!</textarea>
-        </div>
-        <div class="footer">
+            <form>
+                <input id="filename" type="hidden" name="text" value="dev_note_TxT.txt">
+                <textarea id="area" name="textarea" rows="41" cols="100" placeholder="Start Typing In DEV Note">Hello World!</textarea>
+            </form>
         </div>
     </body>
 </html>
