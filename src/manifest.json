@@ -1,4 +1,5 @@
 {
+  "manifest_version": 2,
   "name": "DEV Note",
   "short_name": "DEV Note",
   "start_url": "index.html",
