@@ -4,4 +4,5 @@ A little minimalistic html note taking app, that is minimalist and powerful enog
 more features comming soon!
 
 [Live demo](https://imagineeeinc.github.io/DEV-NOTE/src/index.html#)
+
 [Licence](https://github.com/imagineeeinc/DEV-NOTE/blob/master/LICENSE.md)
