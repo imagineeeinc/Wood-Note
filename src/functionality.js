@@ -65,6 +65,11 @@ function about() {
     var container = document.getElementById('container');
     var p = document.createElement('p');
     p.id = 'aboutus';
+
+    container.appendChild(p);
+    var text = document.createTextNode("Version:1.3.0____Update: PWA Update____Description: This update makes the application now able to be installed on your device.");
+    p.appendChild(text);
+
     container.appendChild(p);
     var text = document.createTextNode("Dev Note Is a Minimlistic note taking app made using Vanila HTML, css & Javascript.");
     p.appendChild(text);
