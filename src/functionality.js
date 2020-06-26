@@ -67,11 +67,11 @@ function about() {
     p.id = 'aboutus';
 
     container.appendChild(p);
-    var text = document.createTextNode("Version:1.3.0____Update: PWA Update____Description: This update makes the application now able to be installed on your device.");
+    var text = document.createTextNode("Version:1.3.0 Update: PWA UpdateDescription: This update makes the application now able to be installed on your device.");
     p.appendChild(text);
 
     container.appendChild(p);
-    var text = document.createTextNode("Dev Note Is a Minimlistic note taking app made using Vanila HTML, css & Javascript.");
+    var text = document.createTextNode("Wood Note Is a Minimlistic note taking app made using Vanila HTML, css & Javascript.");
     p.appendChild(text);
 
     container.appendChild(p);
@@ -128,7 +128,7 @@ function saveasother() {
 function saveas(textarea) {
 	var data = document.getElementsByName('textarea')[0].value;
 	var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
-	saveAs(blob, "dev_note_page.txt");
+	saveAs(blob, "wood_note_page.txt");
 }
 /*function lodf() {
 	document.getElementById('area').value = "";
