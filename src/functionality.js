@@ -67,15 +67,15 @@ function about() {
     p.id = 'aboutus';
 
     container.appendChild(p);
-    var text = document.createTextNode("Version:1.3.0 Update: PWA UpdateDescription: This update makes the application now able to be installed on your device.");
+    var text = document.createTextNode("Version Info[(Version:1.3.0) (Update: PWA) (UpdateDescription: This update makes the application now able to be installed on your device.)]");
     p.appendChild(text);
 
     container.appendChild(p);
-    var text = document.createTextNode("Wood Note Is a Minimlistic note taking app made using Vanila HTML, css & Javascript.");
+    var text = document.createTextNode("App Info[Wood Note Is a Minimlistic note taking app made using Vanila HTML, css & Javascript.]");
     p.appendChild(text);
 
     container.appendChild(p);
-    var text = document.createTextNode("You just write the notes and click save and is saved to your browser");
+    var text = document.createTextNode("App description[You just write the notes and click save and is saved to your browser.]");
     p.appendChild(text);
     
 }
