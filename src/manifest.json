@@ -4,8 +4,8 @@
   "short_name": "Wood Note",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#D3D3D3",
-  "theme_color": "  #808080", 
+  "background_color": "#d63f24",
+  "theme_color": "  #d63f24", 
   "orientation": "portrait-primary",
   "icons": [
     {
