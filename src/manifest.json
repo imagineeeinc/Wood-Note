@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "DEV Note",
-  "short_name": "DEV Note",
+  "name": "Wood Note",
+  "short_name": "Wood Note",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#D3D3D3",
