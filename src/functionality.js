@@ -5,6 +5,8 @@
 }
 
 window.onload = function() {
+    var menu = document.getElementById('fmenu');
+    menu.className = 'shownmenu';
     var home = document.getElementById('container').innerHTML;
     var controls = document.getElementById('controls').innerHTML;
     display_saved_note();
@@ -61,36 +63,70 @@ function home() {
 function about() {
 //	document.getElementById('about').onclick = function() {
     document.getElementById('container').innerHTML = "";
-    document.getElementById('menu').className = 'hiddenmenu';
+    //document.getElementById('menu').className = 'hiddenmenu';
     var container = document.getElementById('container');
     var p = document.createElement('p');
     p.id = 'aboutus';
 
     container.appendChild(p);
-    var text = document.createTextNode("Version Info[(Version:1.3.0) (Update: PWA) (UpdateDescription: This update makes the application now able to be installed on your device.)]");
+    var text = document.createTextNode("Version Info[(Version:2.2.0) (Update: The File IO Update) (UpdateDescription: This Adds some UI Enhancements a bullet point note feature, Give a name to the file you are saving and Load a file.)]");
     p.appendChild(text);
 
     container.appendChild(p);
-    var text = document.createTextNode("App Info[Wood Note Is a Minimlistic note taking app made using Vanila HTML, css & Javascript.]");
+    var text = document.createTextNode("Technoliges[HTML, css, Javascript & FileSaver.js]");
     p.appendChild(text);
-
-    container.appendChild(p);
-    var text = document.createTextNode("App description[You just write the notes and click save and is saved to your browser.]");
-    p.appendChild(text);
-    
 }
 //}
-function menuopen() {
-	document.getElementById('menulink').onclick = function() {
-		var menu = document.getElementById('menu');
-		if(menu.className != 'shownmenu') {
+function fmenuopen() {
+		var menu = document.getElementById('fmenu');
+        var fomenu = document.getElementById('fomenu');
+        var hmenu = document.getElementById('hmenu');
+        //if(menu.className != 'shownmenu') {
+            menu.className = 'shownmenu';
+            fomenu.className = 'fohiddenmenu';
+            hmenu.className = 'hhiddenmenu';
+        /*}
+        else {
+            menu.className = 'fhiddenmenu';
+        }*/
+    }
+
+function fomenuopen() {
+        var menu = document.getElementById('fomenu');
+        var fmenu = document.getElementById('fmenu');
+        var fomenu = document.getElementById('fomenu');
+        //if(menu.className != 'shownmenu') {
+            menu.className = 'shownmenu';
+            fmenu.className = 'fhiddenmenu';
+            hmenu.className = 'hhiddenmenu';
+        /*}
+        else {
+            menu.className = 'fohiddenmenu';
+        }*/
+    }
+function hmenuopen() {
+        var menu = document.getElementById('hmenu');
+        var fmenu = document.getElementById('fmenu');
+        var fomenu = document.getElementById('fomenu');
+        //if(menu.className != 'shownmenu') {
+            menu.className = 'shownmenu';
+            fmenu.className = 'fhiddenmenu';
+            fomenu.className = 'fohiddenmenu';
+        /*}
+        else {
+            menu.className = 'hhiddenmenu';
+        }*/
+    }
+
+function lomenuopen() {
+        var menu = document.getElementById('lomenu');
+        if(menu.className != 'shownmenu') {
             menu.className = 'shownmenu';
         }
         else {
-            menu.className = 'hiddenmenu';
+            menu.className = 'hhiddenmenu';
         }
     }
-}
 
 function savefailas() {
 	var textFile = null,
@@ -126,9 +162,15 @@ function saveasother() {
 }
 
 function saveas(textarea) {
-	var data = document.getElementsByName('textarea')[0].value;
-	var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
-	saveAs(blob, "wood_note_page.txt");
+    var Name = "wood_note_page.txt"
+    var Name = prompt("Please enter your the name of the text file", "wood_note_page.txt");
+    if (Name == "") {
+        alert("you can not save in that name")
+    } else {
+        var data = document.getElementsByName('textarea')[0].value;
+        var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, Name);
+    }
 }
 /*function lodf() {
 	document.getElementById('area').value = "";
@@ -141,14 +183,67 @@ function saveas(textarea) {
             } 
               
         fr.readAsText(this.files[0]);
-}
+}*/
 
-function loadf() {
+/*function loadf(file) {
 	var fileToLoad = inputfile;
 	var fileReader = new FileReader();
 	fileReader.onload = function(fileToLoad) {
 		content = e.target.result;
 		console.log("File loaded properly!");;
 };
-document.getElementById('area').value = fileReader
+document.getElementById('area').textContent=fileReader.result;
+fileReader.readAsText(this.files[0]);
 }*/
+function bullet() {
+    var text = document.getElementById('area').value;
+    document.getElementById('area').value = text + "\u2022 ";
+}
+//\u2022 for bullet point
+
+/*function loadf() {
+    document.querySelector("#load").addEventListener('click', function() {
+    if(document.querySelector("#inputfile").files.length == 0) {
+        alert('Error : No file selected');
+        return;
+    var file = document.querySelector("#inputfile").files[0];
+    var reader = new FileReader();
+    reader.addEventListener('loadstart', function() {
+    console.log('File reading started');
+    reader.addEventListener('load', function(e) {
+    var text = e.target.result;
+
+    document.getElementById('area').value = text;
+    });
+
+    reader.addEventListener('error', function() {
+        alert('Error : Failed to read file');
+    });
+
+    reader.addEventListener('progress', function(e) {
+        if(e.lengthComputable == true) {
+            var percent_read = Math.floor((e.loaded/e.total)*100);
+            console.log(percent_read + '% read');
+        }
+    });
+
+    reader.readAsText(file);
+});*/
+
+function loadf(that) {
+        if(that.files && that.files[0]){
+            var reader = new FileReader();
+            reader.onload = function (e) {  
+                var output=e.target.result;
+                //window.confirm("Are You Sure You Want To Over Right The Text That Is In The Text Box");
+
+                if (confirm("Are You Sure You Want To Over Right The Text That Is In The Text Box")) {
+                    document.getElementById('area').value = output;
+                }
+                else {
+                alert("You Cancelled")
+            }
+            };
+            reader.readAsText(that.files[0]);
+        }
+}

@@ -25,10 +25,10 @@ input#filname:hover {
     text-align: center;
 }
 #header {
-    background: #d63f24;
+    background: #e64e32;
     color: white;
     font-size: 18px;
-    padding: 16px;
+    margin-top: 40px;
 }
 #name {
     display: inline-block;
@@ -66,18 +66,12 @@ input#filname:hover {
     margin-top: -40px;
     margin-bottom: -45px;
 }
-@media only screen and (min-width: 680px) {
-    #menu {
-        display: inline-block;
-        color: white;   
+@media only screen and (min-width: 680px) {   
     }
     .menuitem {
     }
     .menuitem + .menuitem {
         color: white;
-    }
-    #menubutton {
-        display: none;
     }
     #aboutus {
     font-size: 40px
@@ -87,7 +81,7 @@ input#filname:hover {
     #menubutton {
         display: inline;
     }
-    #menu {
+    /*#menu {
         position: fixed;
         background: #e6482c;
         padding: 2%;
@@ -95,12 +89,9 @@ input#filname:hover {
         float: left;
         box-shadow:  1px 1px 3px black;
         border-radius: 5px;
-    }
+    }*/
     .shownmenu {
         display: block;
-    }
-    .hiddenmenu {
-        display: none;
     }
     .menuitem {
         display: block;
@@ -109,9 +100,8 @@ input#filname:hover {
     }
 }
 #controls {
-    margin: -15px;
 }
-a#button, #about, #home, #saveas, #load {
+a#button, #about, #home, #saveas, #load, #menulink {
     width: 100px;
     border-radius: 5px;
     border-left: : 10px solid white;
@@ -120,6 +110,7 @@ a#button, #about, #home, #saveas, #load {
     text-align: left; 
     padding: 2px 2px 2px 2px;
     text-shadow: 0px 1px 1px grey;
+
 }
 a#button:hover {
     background: #ed4e32;
@@ -130,41 +121,13 @@ a#button:active {
     color: #ed4e32;
     box-shadow: 0px 1px 1px white inset;
 }
-a#home:hover {
-    background: #ed4e32;
-    color: white;
-    box-shadow:  1px 1px 3px black;
-}
-a#home:active {
-    color: #ed4e32;
-    box-shadow: 0px 1px 1px white inset;
-}
-a#about:hover {
-    background: #ed4e32;
-    color: white;
-    box-shadow:  1px 1px 3px black;
-    cursor: help;
-}
-a#about:active {
-    color: #ed4e32;
-    box-shadow: 0px 1px 1px white inset;
-}
 
-a#saveas:hover {
+a#menulink:hover {
     background: #ed4e32;
     color: white;
     box-shadow:  1px 1px 3px black;
 }
-a#saveas:active {
-    color: #ed4e32;
-    box-shadow: 0px 1px 1px white inset;
-}
-a#load:hover {
-    background: #ed4e32;
-    color: white;
-    box-shadow:  1px 1px 3px black;
-}
-a#load:active {
+a#menulink:active {
     color: #ed4e32;
     box-shadow: 0px 1px 1px white inset;
 }
@@ -172,10 +135,40 @@ a#load:active {
 #inputfile {
     width: 100px;
     border-radius: 5px;
-    border-left: : 10px solid white;
-    color: black;
+    color: white;
     text-decoration: none;
     text-align: left; 
     padding: 2px 2px 2px 2px;
-    text-shadow: 0px 1px 1px white;
+    text-shadow: 0px 1px 1px grey;
+}
+.fhiddenmenu, .fohiddenmenu, .hhiddenmenu, .lohiddenmenu {
+    display: none;
+}
+#menu {
+        display: inline-block none;
+        color: white
+    }
+#menu {
+        background: #e6482c;
+        padding: 2%;
+        /*float: left;*/
+        font-size: 30px;
+        box-shadow:  1px 1px 3px black;
+        border-radius: 5px;
+    }
+#menulink {
+    border: 2px 0px 2px solid white;
+    border-collapse: collapse; 
+}
+#fmenu, #fomenu, #hmenu {
+    margin-bottom: 0px;
+    float: left;
+
+}
+table {
+    margin-bottom: 0px;
+}
+.lohiddenmenu {
+    float: left;
+    box-shadow:  1px 1px 3px black;
 }

@@ -1,6 +1,7 @@
 const staticCacheName = 'site-static-v1';
 const assets = [
   'index.html',
+  'FileSaver.js'
   'favicon.ico',
   'style.css',
   'functionality.js',,
