@@ -3,6 +3,7 @@
     <head>
         <title>Wood note</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <meta name="theme-color" content="#e64e32"/>
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -10,6 +11,7 @@
         <link rel="manifest" href="manifest.json">
         <script src="functionality.js"></script>
         <script src="FileSaver.js"></script>
+        <script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
 
     </head>
     <body>
@@ -39,6 +41,7 @@
                         </div>
                         <div id="fmenu" class="fhiddenmenu">
                             <a href="javascript:save();" id="button">Save</a>
+                            <!--<a href="javascript:signin();" id="button">Sign in</a>-->
                             <a href="javascript:saveas()" id="button">save as</a>
                             <a href="javascript:lomenuopen()" id="button">load</a>
                             <div id="lomenu" class="lohiddenmenu">
