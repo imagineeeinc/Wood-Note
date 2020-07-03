@@ -4,7 +4,7 @@ const assets = [
   'FileSaver.js'
   'favicon.ico',
   'style.css',
-  'functionality.js',,
+  'functionality.js',
 ];
 // install event
 self.addEventListener('install', evt => {
