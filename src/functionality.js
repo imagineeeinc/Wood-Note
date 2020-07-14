@@ -33,7 +33,7 @@ function display_saved_note() {
         result = localStorage.getItem('note');
     }
     if(result === null) {
-        result = "No note saved";
+        result = "Hello World!";
     }
     document.getElementById('area').value = result;
 }
@@ -56,7 +56,7 @@ function clear() {
 //Dev Note Is a test note taking app made using web technoliges. this was developed in DevMoon
 
 
-function home() {
+/*function home() {
 	location.reload()
 }
 
@@ -69,12 +69,15 @@ function about() {
     p.id = 'aboutus';
 
     container.appendChild(p);
-    var text = document.createTextNode("Version Info[(Version:2.2.1) (Update: The File IO Update) (UpdateDescription: This Adds some UI Enhancements a bullet point note feature, Give a name to the file you are saving and Load a file.)]");
+    var text = document.createTextNode("Version Info[(Version:2.2.1) (Update: The File IO Update) (UpdateDescription: This Adds some UI Enhancements, a bullet point note feature, Give a name to the file you are saving and Load a file.)]");
     p.appendChild(text);
 
     container.appendChild(p);
     var text = document.createTextNode("Technoliges[HTML, css, Javascript & FileSaver.js]");
     p.appendChild(text);
+}*/
+function about() {
+    alert("Version:2.2.1\n\nUpdate: The File IO Update\n\nUpdateDescription: This Adds some UI Enhancements, a bullet point note feature, Give a name to the file you are saving and Load a file.");
 }
 //}
 function fmenuopen() {
@@ -246,4 +249,6 @@ function loadf(that) {
             };
             reader.readAsText(that.files[0]);
         }
+}
+function signin() {
 }
