@@ -69,7 +69,7 @@ function about() {
     p.id = 'aboutus';
 
     container.appendChild(p);
-    var text = document.createTextNode("Version Info[(Version:2.2.0) (Update: The File IO Update) (UpdateDescription: This Adds some UI Enhancements a bullet point note feature, Give a name to the file you are saving and Load a file.)]");
+    var text = document.createTextNode("Version Info[(Version:2.2.1) (Update: The File IO Update) (UpdateDescription: This Adds some UI Enhancements a bullet point note feature, Give a name to the file you are saving and Load a file.)]");
     p.appendChild(text);
 
     container.appendChild(p);
