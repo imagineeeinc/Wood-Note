@@ -77,7 +77,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:2.2.1\n\nUpdate: The File IO Update\n\nUpdateDescription: This Adds some UI Enhancements, a bullet point note feature, Give a name to the file you are saving and Load a file.");
+    alert("Version:2.2.2\n\nUpdate: The File IO Update & Enhancments\n\nUpdateDescription: This Adds some UI Enhancements, a bullet point note feature, Give a name to the file you are saving and Load a file & performance enhnacments.");
 }
 //}
 function fmenuopen() {
