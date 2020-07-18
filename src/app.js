@@ -1,9 +1,17 @@
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-   navigator.serviceWorker.register('../sw.js').then( () => {
-    console.log('Service Worker Registered')
-   })
- })
+window.addEventListener('load', e => {
+  new PWAConfApp();
+  registerSW(); 
+});
+async function registerSW() { 
+  if ('serviceWorker' in navigator) { 
+    try {
+      await navigator.serviceWorker.register('./sw.js'); 
+    } catch (e) {
+      alert('ServiceWorker registration failed. Sorry about that.'); 
+    }
+  } else {
+    document.querySelector('.alert').removeAttribute('hidden'); 
+  }
 }
 
 window.onload = function() {
@@ -76,7 +84,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:2.2.2\n\nUpdate: The File IO Update & Enhancments\n\nUpdateDescription: This Adds some UI Enhancements, a bullet point note feature, Give a name to the file you are saving and Load a file & performance enhnacments.");
+    alert("Version:2.3.1\n\nUpdate: The Files & Clipboard Update & More Enhancments\n\nUpdateDescription: This Adds some Enhancements,performance enhnacments and Copy contents to Clipboard.");
 }
 //}
 function fmenuopen() {
