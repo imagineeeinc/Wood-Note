@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Wood note</title>
+        <title>Wood note the special terrible edition</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
         <meta name="theme-color" content="#e64e32"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="stylesheet" type="text/css" href="style.css" >
-        <link rel="manifest" href="manifest.json">
         <script src="functionality.js"></script>
-        <script src="FileSaver.js"></script>
-        <script src="pwabuilder-sw.js"></script>
-        <!--<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>-->
-        <script type="module">
-            import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-
-            const el = document.createElement('pwa-update');
-            //document.body.appendChild(el);
-        </script>
     </head>
     <body>
         <div id="header">
             <p>
                 <div id="controls">
                     <div id="top">
-                                <h4>Wood Note</h4>
+                                <h4>Wood note the special terrible edition</h4>
                         </div>
                     <!--<p>-->
                         <img src="favicon.ico" style="width: 15px;">
@@ -47,14 +34,8 @@
                         </div>
                         <div id="fmenu" class="fhiddenmenu">
                             <a href="javascript:save();" id="button">Save</a>
-                            <!--<a href="javascript:signin();" id="button">Sign in</a>-->
-                            <a href="javascript:saveas()" id="button">Save As</a>
-                            <a href="javascript:lomenuopen()" id="button">Load</a>
                             <a href="javascript:clear();" id="button">New</a>
                             <a href="javascript:copy();" id="button">Copy Conntents to clipboard</a>
-                            <div id="lomenu" class="lohiddenmenu">
-                                <input type="file" name="inputfile" id="inputfile" onchange='loadf(this)' oninput="loadf()" style="width: 290%; color: white">
-                            </div>
                         </div>
                         <div id="fomenu" class="fohiddenmenu">
                             <a href="javascript:clear();" id="button">Clear</a>
