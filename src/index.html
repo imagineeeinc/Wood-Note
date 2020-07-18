@@ -27,7 +27,7 @@
         //navigator.serviceWorker returns a service worker container, 
         // that has a method to register it to the browser. 
         //Register method returns a promise, which allows you to use the ‘.then’ or ‘.catch’ syntax
-        navigator.serviceWorker.register("serviceWorker.js")
+        navigator.serviceWorker.register("service-worker.js")
         .catch((err) => {console.log("Service worker registration failed");});
         }
         </script>
