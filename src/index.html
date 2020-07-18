@@ -3,14 +3,35 @@
     <head>
         <title>Wood note</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
         <meta name="theme-color" content="#e64e32"/>
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
         <link rel="stylesheet" type="text/css" href="style.css" >
         <link rel="manifest" href="manifest.json">
-        <script src="functionality.js"></script>
         <script src="FileSaver.js"></script>
+        <script src="app.js"></script>
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#b52b12">
+        <meta name="apple-mobile-web-app-title" content="Wood Note">
+        <meta name="description" content="A small and powerful note pad app">
+
+        <script src="install.js"></script>
+
+        <!--<script type="text/javascript">
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                    .then((reg) => {
+                        console.log('Service worker registered.', reg);
+                    });
+                });
+            }
+        </script>-->
+
         <script src="sw.js"></script>
         <script src="pwabuilder-sw.js"></script>
         <!--<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>-->
