@@ -53,7 +53,7 @@ input#filname:hover {
 }
 #area:focus {
     color: black;
-    border: 2px solid white;
+    outline: none;
 }
 .footer {
     width: 100%;

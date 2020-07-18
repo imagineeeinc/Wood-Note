@@ -1,7 +1,17 @@
-	if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js')
-    .then(reg => console.log('service worker registered'))
-    .catch(err => console.log('service worker not registered', err));
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+  navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+  // Registration was successful
+  console.log('Registered!');
+  }, function(err) {
+  // registration failed :(
+  console.log('ServiceWorker registration failed: ', err);
+  }).catch(function(err) {
+  console.log(err);
+  });
+  });
+  } else {
+  console.log('service worker is not supported');
 }
 
 window.onload = function() {
@@ -251,4 +261,13 @@ function loadf(that) {
         }
 }
 function signin() {
+}
+function copy() {
+    var copyText = document.getElementById("area");
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
 }

@@ -13,14 +13,13 @@
         <script src="FileSaver.js"></script>
         <script src="pwabuilder-sw.js"></script>
         <!--<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>-->
-        <script type="module" src="pwainstall.js"></script>
+        <script type="module" src="https://github.com/pwa-builder/pwa-update"></script>
         <script type="module">
-            import 'pwaupdate.js';
+            import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
 
             const el = document.createElement('pwa-update');
-            document.body.appendChild(el);
+            //document.body.appendChild(el);
         </script>
-
     </head>
     <body>
         <div id="header">
@@ -53,6 +52,7 @@
                             <a href="javascript:saveas()" id="button">Save As</a>
                             <a href="javascript:lomenuopen()" id="button">Load</a>
                             <a href="javascript:clear();" id="button">New</a>
+                            <a href="javascript:copy();" id="button">Copy Conntents to clipboard</a>
                             <div id="lomenu" class="lohiddenmenu">
                                 <input type="file" name="inputfile" id="inputfile" onchange='loadf(this)' oninput="loadf()" style="width: 290%; color: white">
                             </div>

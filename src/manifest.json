@@ -3,10 +3,10 @@
     "name": "Wood Note",
     "short_name": "Wood Note",
     "start_url": "https://imagineeeinc.github.io/Wood-Note/src/index.html",
-    "display": "standalone",
+    "display": "fullscreen",
     "background_color": "#d63f24",
     "theme_color": "  #d63f24",
-    "orientation": "portrait",
+    "orientation": "any",
     "icons": [
         {
             "src": "https://imagineeeinc.github.io/Wood-Note/src/android-chrome-192x192.png",
