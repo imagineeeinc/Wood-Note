@@ -21,8 +21,8 @@ deferredInstallPrompt.userChoice
 
     console.log('Wood Note Installed!👏', evt);
 
-    @media all and (display-mode: standalone) {
+    /*@media all and (display-mode: standalone) {
   body {
     background-color: #b52b12;
   }
-}
+}*/

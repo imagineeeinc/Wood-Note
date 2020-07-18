@@ -1,7 +1,3 @@
-const FILES_TO_CACHE = [
-  'index.html',
-];
-
 self.addEventListener("activate", event => {
   self.clients.claim();
 });
@@ -26,7 +22,7 @@ evt.waitUntil(
 
 if (evt.request.mode !== 'navigate') {
   // Not a page navigation, bail.
-  return;
+  //return;
 }
 evt.respondWith(
     fetch(evt.request)
@@ -66,7 +62,7 @@ if (evt.request.url.includes('/forecast/')) {
               return cache.match(evt.request);
             });
       }));
-  return;
+  //return;
 }
 evt.respondWith(
     caches.open(CACHE_NAME).then((cache) => {
@@ -75,4 +71,4 @@ evt.respondWith(
             return response || fetch(evt.request);
           });
     })
-);
+)};
