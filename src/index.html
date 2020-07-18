@@ -5,9 +5,9 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 
         <meta name="theme-color" content="#e64e32"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
 
         <link rel="stylesheet" type="text/css" href="style.css" >
         <link rel="manifest" href="manifest.json">
@@ -21,7 +21,7 @@
 
         <script src="install.js"></script>
 
-        <!--<script type="text/javascript">
+        <script type="text/javascript">
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
                     navigator.serviceWorker.register('/service-worker.js')
@@ -30,17 +30,40 @@
                     });
                 });
             }
-        </script>-->
+            if (!('caches' in window)) {
+                return null;
+            }
+            const url = `${window.location.origin}/forecast/${coords}`;
+            return caches.match(url)
+            then((response) => {
+                if (response) {
+                    return response.json();
+                }
+                return null;
+            })
+            .catch((err) => {
+                console.error('Error getting data from cache', err);
+                return null;
+            });
 
-        <script src="service-worker.js"></script>
+            getForecastFromCache(location.geo)
+            .then((forecast) => {
+                renderForecast(card, forecast);
+            });
+            if (lastUpdated >= data.currently.time) {
+                return;
+            }
+        </script>
+
+        <!--<script src="service-worker.js"></script>
         <script src="pwabuilder-sw.js"></script>
-        <!--<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>-->
-        <script type="module">
+        <script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>-->
+        <!--<script type="module">
             import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
 
             const el = document.createElement('pwa-update');
             //document.body.appendChild(el);
-        </script>
+        </script>-->
     </head>
     <body>
         <div id="header">
@@ -50,7 +73,7 @@
                                 <h4>Wood Note</h4>
                         </div>
                     <!--<p>-->
-                        <img src="favicon.ico" style="width: 15px;">
+                        <img src="Favicon/favicon.ico" style="width: 15px;">
                         <!--<div id="menubutton"><a href="javascript:menuopen()" id="menulink" id="button">MENU&#9776;</a></div>-->
                         <div style="background-color: #d63f24;">
                             <table style="background-color: #d63f24;">
