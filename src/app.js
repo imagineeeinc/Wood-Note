@@ -55,9 +55,6 @@ function clear() {
     document.getElementById('area').value = "";
 }
 
-//Dev Note Is a test note taking app made using web technoliges. this was developed in DevMoon
-
-
 /*function home() {
 	location.reload()
 }
