@@ -9,32 +9,32 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "https://imagineeeinc.github.io/Wood-Note/src/android-chrome-192x192.png",
+            "src": "https://imagineeeinc.github.io/Wood-Note/src/Favicon/android-chrome-192x192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "https://imagineeeinc.github.io/Wood-Note/src/apple-touch-icon.png",
+            "src": "https://imagineeeinc.github.io/Wood-Note/src/Favicon/apple-touch-icon.png",
             "type": "image/png",
             "sizes": "180x180"
         },
         {
-            "src": "https://imagineeeinc.github.io/Wood-Note/src/android-chrome-512x512.png",
+            "src": "https://imagineeeinc.github.io/Wood-Note/src/Favicon/android-chrome-512x512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "https://imagineeeinc.github.io/Wood-Note/src/favicon-16x16.png",
+            "src": "https://imagineeeinc.github.io/Wood-Note/src/Favicon/favicon-16x16.png",
             "type": "image/png",
             "sizes": "16x16"
         },
         {
-            "src": "https://imagineeeinc.github.io/Wood-Note/src/favicon-32x32.png",
+            "src": "https://imagineeeinc.github.io/Wood-Note/src/Favicon/favicon-32x32.png",
             "type": "image/png",
             "sizes": "32x32"
         },
         {
-            "src": "https://imagineeeinc.github.io/Wood-Note/src/favicon.ico",
+            "src": "https://imagineeeinc.github.io/Wood-Note/src/Favicon/favicon.ico",
             "type": "image/ico",
             "sizes": "48x48"
         }
