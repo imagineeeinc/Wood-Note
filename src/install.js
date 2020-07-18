@@ -1,5 +1,4 @@
 window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
-
 deferredInstallPrompt = evt;
 installButton.removeAttribute('hidden');
 
