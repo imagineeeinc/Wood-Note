@@ -21,7 +21,7 @@
 
         <script src="install.js"></script>
 
-        <!--<script type="text/javascript">
+        <script type="text/javascript">
         //first check if the browser supports the service worker
         if ("serviceWorker" in navigator) {
         //navigator.serviceWorker returns a service worker container, 
@@ -29,9 +29,11 @@
         //Register method returns a promise, which allows you to use the ‘.then’ or ‘.catch’ syntax
         navigator.serviceWorker.register("serviceWorker.js")
         .catch((err) => {console.log("Service worker registration failed");});
-   }
-        </script>-->
+        }
+        </script>
 
+        <script src="https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js"></script>
+        <script src="pwabuilder-sw.js"></script>
         <script src="service-worker.js"></script>
         <!--<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>-->
     </head>

@@ -1,7 +1,5 @@
 // This is the "Offline page" service worker
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
-
 const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
@@ -48,10 +46,6 @@ self.addEventListener('fetch', (event) => {
 
 // This is the "Offline copy of assets" service worker
 
-const CACHE = "pwabuilder-offline";
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
-
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
@@ -67,10 +61,7 @@ workbox.routing.registerRoute(
 
 // This is the "Offline copy of assets" service worker
 
-const CACHE = "pwabuilder-offline";
 const QUEUE_NAME = "bgSyncQueue";
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
@@ -93,8 +84,6 @@ workbox.routing.registerRoute(
 );
 
 //This is the service worker with the Advanced caching
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
 
 const HTML_CACHE = "html";
 const JS_CACHE = "javascript";
@@ -170,10 +159,7 @@ workbox.routing.registerRoute(
 
 // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
 
-const CACHE = "pwabuilder-offline-page";
-
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "ToDo-replace-this-name.html";
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
