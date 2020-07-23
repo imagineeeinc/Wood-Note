@@ -6,6 +6,7 @@ const assets = [
   'src/FileSaver.js',
   'manifest.json.js',
   'src/style.css',
+  'src/emojiPicker.js',
 ];
 // install event
 self.addEventListener('install', evt => {
