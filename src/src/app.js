@@ -96,7 +96,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:2.3.1\n\nUpdate: The Files & Clipboard Update & More Enhancments\n\nUpdateDescription: This Adds some Enhancements,performance enhnacments and Copy contents to Clipboard.");
+    alert("Version:3.0.0\n\nUpdate: The Better Mobile Update\n\nUpdateDescription: This the app more usable on mobile and some enhancments overall");
 }
 //}
 function fmenuopen() {
