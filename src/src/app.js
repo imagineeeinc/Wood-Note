@@ -96,7 +96,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:3.0.0\n\nUpdate: The Better Mobile Update\n\nUpdateDescription: This the app is more usable on mobile and some enhancments overall");
+    alert("Version:3.0.1\n\nUpdate: The Better Mobile Update\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, tweaked positions of objects and some enhancments overall");
 }
 //}
 function fmenuopen() {
