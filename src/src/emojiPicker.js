@@ -55,12 +55,12 @@ class EmojiPicker {
     emojiPicker.style.top = "20px";
     emojiPicker.style.zIndex = "999";
     emojiPicker.style.display = "none";
-    emojiPicker.style.width = "300px";
+    emojiPicker.style.width = "150px";
     emojiPicker.style.padding = "7px 7px 7px 7px";
     emojiPicker.style.marginTop = "5px";
     emojiPicker.style.overflow = "hidden";
     emojiPicker.style.background = "#fff";
-    emojiPicker.style.height = "500px";
+    emojiPicker.style.height = "300px";
     emojiPicker.style.overflowY = "auto";
     emojiPicker.style.boxShadow =
       "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)";
