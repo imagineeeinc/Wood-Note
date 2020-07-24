@@ -7,6 +7,7 @@ const assets = [
   'manifest.json.js',
   'src/style.css',
   'src/emojiPicker.js',
+  'Favicon/favicon.ico',
 ];
 // install event
 self.addEventListener('install', evt => {
