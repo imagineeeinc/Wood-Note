@@ -85,6 +85,9 @@ input#filname:hover {
         height: 100%;
         color: black;
         border: 2px solid white;
+        box-shadow: 2px 2px 5px lightgrey;
+        border-radius: 10px;
+        margin-top: 10px;
     }
     .menuitem {
     }
@@ -121,6 +124,9 @@ input#filname:hover {
         color: black;
         border: 2px solid white;
         font-size: 18px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        margin-top: 10px;
     }
     #menubutton {
         display: inline;

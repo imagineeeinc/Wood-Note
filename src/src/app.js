@@ -96,7 +96,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:3.0.0\n\nUpdate: The Better Mobile Update\n\nUpdateDescription: This the app more usable on mobile and some enhancments overall");
+    alert("Version:3.0.0\n\nUpdate: The Better Mobile Update\n\nUpdateDescription: This the app is more usable on mobile and some enhancments overall");
 }
 //}
 function fmenuopen() {
@@ -368,4 +368,14 @@ function at() {
     var endPos = document.getElementById('area').selectionEnd;
     //console.log(startPos + "," + endPos)
     document.getElementById('area').value = document.getElementById('area').value.substring(0, startPos) + "@" + document.getElementById('area').value.substring(endPos, document.getElementById('area').value.length);
+}
+function mover(area) {
+    var Pos = document.getElementById('area').selectionStart + 1;
+    document.getElementById("area").focus();
+    document.getElementById("area").setSelectionRange(Pos, Pos);
+}
+function movel(area) {
+    var Pos = document.getElementById('area').selectionStart - 1;
+    document.getElementById("area").focus();
+    document.getElementById("area").setSelectionRange(Pos, Pos);
 }
