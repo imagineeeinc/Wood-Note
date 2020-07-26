@@ -1,5 +1,5 @@
 # WOOD-NOTE
-A little minimalistic html note taking app, that is minimalist and powerful enogh, uses Vanila HTML, css & javascript, and saving the notes to your native browser for fast note taking in one page and come back later to read it.
+A little minimalistic html note pad app, that is minimalist and powerful enough, uses Vanila HTML, css & javascript, and saving the notes to your native browser for fast note taking in one page and come back later to read it.
 
 more features comming soon!
 
