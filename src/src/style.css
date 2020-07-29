@@ -3,7 +3,6 @@ body {
     font-family:  'Space Mono, Arial', monospace;
     font: monospace;
 }
-.wrapper { overscroll-behavior: none }
 #filename {
     margin: -50px;
     padding: -15px;

@@ -97,7 +97,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:3.0.1\n\nUpdate: The Better Mobile Update\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, tweaked positions of objects and some enhancments overall");
+    alert("Version:3.2.0\n\nUpdate: The Better Mobile Update and Save As\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, Save As Is now better and dose not depend on outside dependecies, tweaked positions of objects and some enhancments overall");
 }
 //}
 function fmenuopen() {
@@ -192,9 +192,23 @@ function saveas(textarea) {
     	if (Name == "") {
     		alert("you can not save in that name")
     	} else {
-    		var data = document.getElementsByName('textarea')[0].value;
+    		/*var data = document.getElementsByName('textarea')[0].value;
     		var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
-    		saveAs(blob, Name);
+    		saveAs(blob, Name);*/
+    		var element = document.createElement('a');
+    		var text = document.getElementsByName('textarea')[0].value
+    		var filename = Name
+    		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    		element.setAttribute('download', filename);
+
+    		element.style.display = 'none';
+    		document.body.appendChild(element);
+
+    		element.click();
+
+    		document.body.removeChild(element);
+
+    		download(filename, text);
     	}
     } else {
     }
