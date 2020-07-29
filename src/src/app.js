@@ -28,6 +28,7 @@ window.onload = function() {
     display_saved_note();
 }*/
 }
+ 
 /*function auto() {
     const chck = document.getElementById('auto').checked;
     if (chck == true) {
@@ -186,12 +187,16 @@ function saveasother() {
 function saveas(textarea) {
     var Name = "wood_note_page.txt"
     var Name = prompt("Please enter your the name of the text file", "wood_note_page.txt");
-    if (Name == "") {
-        alert("you can not save in that name")
+    var Ask = confirm("Do You Want To Save As")
+    if (Ask == true) {
+    	if (Name == "") {
+    		alert("you can not save in that name")
+    	} else {
+    		var data = document.getElementsByName('textarea')[0].value;
+    		var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
+    		saveAs(blob, Name);
+    	}
     } else {
-        var data = document.getElementsByName('textarea')[0].value;
-        var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
-        saveAs(blob, Name);
     }
 }
 /*function lodf() {
