@@ -17,16 +17,16 @@ self.addEventListener('install', e => {
   );
 });
 
-self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
-});
+self.addEventListener('fetch', function(event) {
+  console.log(event.request.url);
+ });
 
-self.addEventListener('fetch', event => {
+ self.addEventListener('fetch', function(event) {
+  console.log(event.request.url);
+ 
   event.respondWith(
-    caches.open(cacheName)
-      .then(cache => cache.match(event.request, {ignoreSearch: true}))
-      .then(response => {
+    caches.match(event.request).then(function(response) {
       return response || fetch(event.request);
     })
   );
-});
+ });

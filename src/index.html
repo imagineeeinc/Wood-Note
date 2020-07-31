@@ -29,7 +29,7 @@
         </script>-->
 
         <!--<script src="pwabuilder-sw.js"></script>-->
-        <script >
+        <!--<script >
         if ('serviceWorker'in navigator) {
             navigator.serviceWorker.register('/service-worker.js', {
                 scope: '/'
@@ -59,8 +59,15 @@
 
         ga('create', 'UA-59325548-2', 'auto');
         ga('send', 'pageview');
-        </script>
-        <script src="manup.js"></script>
+        </script>-->
+        <!--<script src="manup.js"></script>-->
+        <script>
+            if('serviceWorker' in navigator) {
+              navigator.serviceWorker
+                       .register('/sw.js')
+                       .then(function() { console.log("Service Worker Registered"); });
+            }
+            </script>
     </head>
     <body>
         <div id="header">
