@@ -27,14 +27,37 @@ window.onload = function() {
     document.getElementById('controls').innerHTML = controls;
     document.getElementById('menu').className = 'hiddenmenu';
     display_saved_note();
-    }*/
+    }
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('/service-worker.js');
         });
-      }
+      }*/
       console.log("Window.onLoad\nLoaded")
 }
+
+if (window !== undefined) {
+      var menu = document.getElementById('fmenu');
+    menu.className = 'shownmenu';
+    var home = document.getElementById('container').innerHTML;
+    var controls = document.getElementById('controls').innerHTML;
+    display_saved_note();
+    document.getElementById('area').focus()
+    //setInterval(function() {settheme()}, 500);
+    /*document.getElementById('home').onclick = function() {
+    document.getElementById('container').innerHTML = home;
+    document.getElementById('controls').innerHTML = controls;
+    document.getElementById('menu').className = 'hiddenmenu';
+    display_saved_note();
+    }
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }*/
+      console.log("Window.onLoad\nLoaded")
+}
+
  
 /*function auto() {
     const chck = document.getElementById('auto').checked;
