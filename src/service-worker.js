@@ -6,13 +6,13 @@ self.addEventListener('install', function(e) {
    caches.open('airhorner').then(function(cache) {
      return cache.addAll([
         `/`,
-        `/index.html`,
-        `/src/style.css`,
-        `/src/app.js`,
-        `/src/emojiPicker.js`,
-        `/Favicon/favicon.ico`,
-        `/offline.html`,
-        `/manifest.json`
+        `index.html`,
+        `src/style.css`,
+        `src/app.js`,
+        `src/emojiPicker.js`,
+        `Favicon/favicon.ico`,
+        `offline.html`,
+        `manifest.json`
       ])
           .then(() => self.skipWaiting());
     })
