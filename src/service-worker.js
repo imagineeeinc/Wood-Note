@@ -1,3 +1,12 @@
+if( 'function' === typeof importScripts) {
+  importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+  //addEventListener('message', onMessage);   
+}
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
+}
 // This is the "Offline page" service worker
 
 const CACHE = "offline-page";
