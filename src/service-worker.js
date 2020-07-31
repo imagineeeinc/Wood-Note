@@ -1,4 +1,4 @@
-importScripts('app.js');
+importScripts('src/app.js');
 
 
 self.addEventListener('install', function(e) {
