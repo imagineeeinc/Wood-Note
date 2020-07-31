@@ -1,9 +1,9 @@
 // This is the "Offline page" service worker
 
-const CACHE = "pwabuilder-page";
+const CACHE = "offline-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "index.html";
+const offlineFallbackPage = "offline.html";
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
