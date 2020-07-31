@@ -1,4 +1,4 @@
-const cacheName = `wood note`;
+const cacheName = 'wood note';
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
