@@ -1,4 +1,4 @@
-window.addEventListener('load', e => {
+/*window.addEventListener('load', e => {
   new PWAConfApp();
   registerSW(); 
 });
@@ -12,7 +12,7 @@ async function registerSW() {
   } else {
     document.querySelector('.alert').removeAttribute('hidden'); 
   }
-}
+}*/
 
 window.onload = function() {
     var menu = document.getElementById('fmenu');
@@ -21,12 +21,19 @@ window.onload = function() {
     var controls = document.getElementById('controls').innerHTML;
     display_saved_note();
     document.getElementById('area').focus()
+    //setInterval(function() {settheme()}, 500);
     /*document.getElementById('home').onclick = function() {
     document.getElementById('container').innerHTML = home;
     document.getElementById('controls').innerHTML = controls;
     document.getElementById('menu').className = 'hiddenmenu';
     display_saved_note();
-}*/
+    }*/
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+      console.log("Window.onLoad\nLoaded")
 }
  
 /*function auto() {
@@ -54,9 +61,11 @@ function check_web_storage_support() {
 function display_saved_note() {
     if(check_web_storage_support() == true) {
         result = localStorage.getItem('note');
+        theme = localStorage.getItem('theme');
     }
     if(result === null) {
         result = "Hello World!";
+
     }
     document.getElementById('area').value = result;
 }
@@ -75,6 +84,11 @@ function save() {
 function clear() {
     document.getElementById('area').value = "";
 }
+
+/*function settheme() {
+    var theme = document.getElementById("theme").value;
+    document.querySelectorAll('#button').style.background = "blue";
+}*/
 
 /*function home() {
 	location.reload()
@@ -97,7 +111,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:3.2.0\n\nUpdate: The Better Mobile Update and Save As\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, Save As Is now better and dose not depend on outside dependecies, tweaked positions of objects and some enhancments overall");
+    alert("Version:3.4.0\n\nUpdate: PWA Update\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, Save As Is now better and dose not depend on outside dependecies, tweaked positions of objects, Updated PWA Code and some enhancments overall");
 }
 //}
 function fmenuopen() {
