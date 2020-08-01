@@ -36,7 +36,7 @@ window.onload = function() {
       console.log("Window.onLoad\nLoaded")
 }
 
-if (window !== undefined) {
+if (typeof window !== "undefined") {
       var menu = document.getElementById('fmenu');
     menu.className = 'shownmenu';
     var home = document.getElementById('container').innerHTML;
