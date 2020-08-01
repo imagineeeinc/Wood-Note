@@ -1,11 +1,10 @@
-importScripts('src/app.js');
+//importScripts('src/app.js');
 
 
 self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('airhorner').then(function(cache) {
      return cache.addAll([
-        `/`,
         `index.html`,
         `src/style.css`,
         `src/app.js`,
