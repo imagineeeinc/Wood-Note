@@ -89,7 +89,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:3.4.6\n\nUpdate: PWA Update\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, Save As Is now better and dose not depend on outside dependencies, tweaked positions of objects, Updated PWA Code and some enhancements overall");
+    alert("Version:3.4.7\n\nUpdate: PWA Update\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, Save As Is now better and dose not depend on outside dependencies, tweaked positions of objects, Updated PWA Code and some enhancements overall");
 }
 //}
 function fmenuopen() {
