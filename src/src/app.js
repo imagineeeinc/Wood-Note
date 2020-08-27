@@ -1,19 +1,3 @@
-/*window.addEventListener('load', e => {
-  new PWAConfApp();
-  registerSW(); 
-});
-async function registerSW() { 
-  if ('serviceWorker' in navigator) { 
-    try {
-      await navigator.serviceWorker.register('./sw.js'); 
-    } catch (e) {
-      alert('ServiceWorker registration failed. Sorry about that.'); 
-    }
-  } else {
-    document.querySelector('.alert').removeAttribute('hidden'); 
-  }
-}*/
-
 window.onload = function() {
     var menu = document.getElementById('fmenu');
     menu.className = 'shownmenu';
@@ -27,37 +11,8 @@ window.onload = function() {
     document.getElementById('controls').innerHTML = controls;
     document.getElementById('menu').className = 'hiddenmenu';
     display_saved_note();
-    }
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js');
-        });
-      }*/
-      console.log("Window.onLoad\nLoaded")
+    }*/
 }
-
-if (typeof window !== "undefined") {
-      var menu = document.getElementById('fmenu');
-    menu.className = 'shownmenu';
-    var home = document.getElementById('container').innerHTML;
-    var controls = document.getElementById('controls').innerHTML;
-    display_saved_note();
-    document.getElementById('area').focus()
-    //setInterval(function() {settheme()}, 500);
-    /*document.getElementById('home').onclick = function() {
-    document.getElementById('container').innerHTML = home;
-    document.getElementById('controls').innerHTML = controls;
-    document.getElementById('menu').className = 'hiddenmenu';
-    display_saved_note();
-    }
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js');
-        });
-      }*/
-      console.log("Window.onLoad\nLoaded")
-}
-
  
 /*function auto() {
     const chck = document.getElementById('auto').checked;
@@ -134,7 +89,7 @@ function about() {
     p.appendChild(text);
 }*/
 function about() {
-    alert("Version:3.4.5\n\nUpdate: PWA Update\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, Save As Is now better and dose not depend on outside dependencies, tweaked positions of objects, Updated PWA Code and some enhancements overall");
+    alert("Version:3.4.6\n\nUpdate: PWA Update\n\nUpdateDescription: This the app is more usable on mobile, added emoji support, added move left or right, Save As Is now better and dose not depend on outside dependencies, tweaked positions of objects, Updated PWA Code and some enhancements overall");
 }
 //}
 function fmenuopen() {

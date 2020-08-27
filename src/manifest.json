@@ -38,6 +38,12 @@
             "type": "image/ico",
             "sizes": "48x48"
         }
+        {
+      "src": "Favicon/maskable_icon.png",
+      "sizes": "930x930",
+      "type": "image/png",
+      "purpose": "any maskable"
+       }
     ],
     "url": "https://imagineeeinc.github.io/Wood-Note/src/",
     "lang": "English",
