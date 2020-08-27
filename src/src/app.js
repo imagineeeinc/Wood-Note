@@ -12,6 +12,11 @@ window.onload = function() {
     document.getElementById('menu').className = 'hiddenmenu';
     display_saved_note();
     }*/
+if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('../service-worker.js');
+        });
+      }
 }
  
 /*function auto() {
